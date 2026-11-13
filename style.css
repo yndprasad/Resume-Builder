@@ -1,0 +1,237 @@
+:root {
+    --bg-body: #f8fafc;
+    --bg-navbar: #ffffff;
+    --bg-card: #ffffff;
+    --bg-resume: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --primary-color: #4f46e5;
+    --primary-hover: #4338ca;
+    --input-bg: #ffffff;
+    --input-border: #cbd5e1;
+    --input-text: #0f172a;
+    --skill-item-bg: #f1f5f9;
+    --skill-item-text: #1e293b;
+    --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="dark"] {
+    --bg-body: #0b0f19;
+    --bg-navbar: #111827;
+    --bg-card: #111827;
+    --bg-resume: #111827;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --border-color: #1e293b;
+    --primary-color: #6366f1;
+    --primary-hover: #818cf8;
+    --input-bg: #111827 !important;
+    --input-border: #334155;
+    --input-text: #f8fafc !important;
+    --skill-item-bg: #1e293b;
+    --skill-item-text: #f8fafc;
+    --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.app-navbar {
+    background-color: var(--bg-navbar);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-brand {
+    color: var(--text-main) !important;
+}
+
+.card {
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    border-radius: 12px;
+    box-shadow: var(--shadow) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.form-control, .form-select {
+    background-color: var(--input-bg) !important;
+    border-color: var(--input-border) !important;
+    color: var(--input-text) !important;
+    border-radius: 8px;
+    padding: 0.65rem 0.85rem;
+    font-size: 0.95rem;
+}
+
+[data-theme="dark"] textarea.form-control {
+    scrollbar-color: #475569 #1f2937;
+}
+
+[data-theme="dark"] textarea.form-control::-webkit-scrollbar {
+    width: 8px;
+}
+
+[data-theme="dark"] textarea.form-control::-webkit-scrollbar-track {
+    background: #111827;
+    border-radius: 4px;
+}
+
+[data-theme="dark"] textarea.form-control::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 4px;
+}
+
+[data-theme="dark"] textarea.form-control::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+textarea:-webkit-autofill {
+    -webkit-text-fill-color: var(--input-text) !important;
+    -webkit-box-shadow: 0 0 0px 1000px var(--input-bg) inset !important;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2) !important;
+}
+
+.form-control::placeholder {
+    color: var(--text-muted);
+    opacity: 0.7;
+}
+
+h4 {
+    color: var(--text-main);
+}
+
+#skillList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+#skillList li {
+    background-color: var(--skill-item-bg);
+    color: var(--skill-item-text);
+    border: 1px solid var(--border-color);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 0 !important;
+}
+
+.sticky-preview {
+    position: sticky;
+    top: 20px;
+}
+
+#resume {
+    background-color: var(--bg-resume);
+    color: var(--text-main);
+    padding: 35px 45px 45px 45px;
+    min-height: 1000px;
+    box-shadow: var(--shadow);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.resume-main-heading {
+    color: var(--primary-color);
+    font-weight: 900;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+}
+
+.resume-heading {
+    color: var(--primary-color);
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-top: 24px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 4px;
+}
+
+.resume-section p, .resume-section li, .resume-section h6 {
+    font-size: 0.95rem;
+    color: var(--text-main);
+    line-height: 1.5;
+    font-weight: 400; /* Ensure normal black weight across elements */
+}
+
+.declaration-text, .signature-footer {
+    font-size: 0.9rem;
+    color: var(--text-main);
+}
+
+.declaration-line {
+    border-top: 1px solid var(--border-color);
+    opacity: 1;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+.signature-footer {
+    margin-top: 50px;
+}
+
+ul {
+    padding-left: 18px;
+}
+
+li {
+    margin-bottom: 4px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+}
+
+.theme-toggle-btn {
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 992px) {
+    .sticky-preview {
+        position: static;
+        margin-top: 30px;
+    }
+    #resume {
+        padding: 30px 20px;
+    }
+}
+
+@media print {
+    .resume-section {
+        page-break-inside: avoid;
+    }
+}
